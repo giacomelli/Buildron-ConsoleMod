@@ -11,7 +11,7 @@ Ask on Twitter [@ogiacomelli](http://twitter.com/ogiacomelli).
  
 ### How to improve it?
 
-Create a fork of [jumpstart](https://github.com/giacomelli/Buildron-ConsoleMod/fork). 
+Create a fork of [Buildron-ConsoleMod](https://github.com/giacomelli/Buildron-ConsoleMod/fork). 
 
 Did you change it? [Submit a pull request](https://github.com/giacomelli/Buildron-ConsoleMod/pull/new/master).
 
