@@ -256,3 +256,11 @@ __instances__
 [Tt]emp/
 [Oo]bj/
 Assets/AssetStoreTools*
+build/mac/Buildron.app/Mods/ConsoleMod
+build/linux/Mods/ConsoleMod
+build/win/Mods/ConsoleMod
+ConsoleMod.mac.zip
+ConsoleMod.linux.zip
+ConsoleMod.win.zip
+ConsoleMod.dll
+ConsoleMod.dll.mdb
