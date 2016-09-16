@@ -8,15 +8,15 @@ echo
 
 echo ================[ Compressing mod
 pushd $PWD/../build/linux/Mods/ >/dev/null
-zip -r -q ../../ConsoleMod.linux.zip ConsoleMod
+zip -vrq ../../ConsoleMod.linux.zip ConsoleMod -x "*.DS_Store"
 
 popd >/dev/null
 pushd $PWD/../build/mac/Buildron.app/Mods/ >/dev/null
-zip -r -q ../../../ConsoleMod.mac.zip ConsoleMod
+zip -vrq ../../../ConsoleMod.mac.zip ConsoleMod -x "*.DS_Store"
 
 popd >/dev/null
 pushd $PWD/../build/win/Mods/ >/dev/null
-zip -r -q ../../ConsoleMod.win.zip ConsoleMod
+zip -vrq ../../ConsoleMod.win.zip ConsoleMod -x "*.DS_Store"
 
 popd >/dev/null
 echo ================[ Mod packages .zip available at build folder:
