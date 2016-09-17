@@ -1,27 +1,23 @@
-echo ================[ Starting packing mod
-./build.sh linux
-echo
-./build.sh mac
-echo
-./build.sh win
-echo
+if [ "$1" == "mac" ]
+then
+  MODS_FOLDER="Buildron.app/Mods/"
+  ZIP_FOLDER="../../../"
+else
+  MODS_FOLDER="Mods/"
+  ZIP_FOLDER="../../"
+fi
+
+echo ================[ Packing mod for $1
+./build.sh $1
 
 echo ================[ Compressing mod
-pushd $PWD/../build/linux/Mods/ >/dev/null
-zip -vrq ../../ConsoleMod.linux.zip ConsoleMod -x "*.DS_Store"
-
+pushd $PWD/../build/$1/$MODS_FOLDER >/dev/null
+zip -vrq $ZIP_FOLDER/ConsoleMod.$1.zip ConsoleMod -x "*.DS_Store" -x "*__instances__*" -x "*.pdb" -x "*.mdb"
 popd >/dev/null
-pushd $PWD/../build/mac/Buildron.app/Mods/ >/dev/null
-zip -vrq ../../../ConsoleMod.mac.zip ConsoleMod -x "*.DS_Store"
 
-popd >/dev/null
-pushd $PWD/../build/win/Mods/ >/dev/null
-zip -vrq ../../ConsoleMod.win.zip ConsoleMod -x "*.DS_Store"
-
-popd >/dev/null
-echo ================[ Mod packages .zip available at build folder:
+echo ================[ Mod package .zip available at build folder:
 pushd ../build >/dev/null
-ls *.zip
+ls *$1*.zip
 popd >/dev/null
-echo
+
 echo ================[ Mod pack done.
